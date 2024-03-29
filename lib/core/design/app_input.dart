@@ -7,8 +7,10 @@ class AppInput extends StatefulWidget {
   final String? hintText,prefixIcon;
   final bool isPassword;
   final double bottomSpace;
+  final TextEditingController? controller;
+  final String? Function(String? value )? validator;
 
-  const AppInput({super.key, this.hintText, this.prefixIcon,  this.isPassword=false,  this.bottomSpace= 16 });
+  const AppInput({super.key, this.hintText, this.prefixIcon,  this.isPassword=false,  this.bottomSpace= 16, this.controller, this.validator });
 
   @override
   State<AppInput> createState() => _AppInputState();
@@ -21,6 +23,8 @@ class _AppInputState extends State<AppInput> {
     return  Padding(
       padding:  EdgeInsetsDirectional.only(bottom: widget.bottomSpace.h),
       child: TextFormField(
+        validator:widget.validator,
+        controller:widget.controller,
         obscureText:widget.isPassword && isHide ,
         decoration: InputDecoration(
           prefixIcon:widget.prefixIcon!=null?Padding(
