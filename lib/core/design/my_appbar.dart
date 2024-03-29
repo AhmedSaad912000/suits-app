@@ -5,7 +5,7 @@ import 'package:suits/core/design/app_image.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String text;
-  const MyAppBar({super.key, required this.text});
+  const MyAppBar({super.key,  this.text=''});
 
   @override
   Widget build(BuildContext context) {
