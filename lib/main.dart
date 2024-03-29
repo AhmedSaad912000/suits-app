@@ -40,6 +40,23 @@ class MyApp extends StatelessWidget {
          debugShowCheckedModeBanner: false,
             title: 'Suits',
             theme: ThemeData(
+              inputDecorationTheme: InputDecorationTheme(
+                hintStyle: TextStyle(
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'Inter',
+                    color: Color(0xffA1A8B0)
+                ),
+                fillColor: Color(0xffF9FAFB),
+                filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(24.r),
+                  ),
+                  enabledBorder:OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(24.r),
+                    borderSide: BorderSide(color: Color(0xffE5E7EB)),)
+
+              ),
               filledButtonTheme: FilledButtonThemeData(style: FilledButton.styleFrom(
                 fixedSize: Size.fromHeight(56.h),
                 textStyle: TextStyle(
@@ -58,7 +75,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: SplashView(),
+      child: LoginView(),
 
     );
   }
