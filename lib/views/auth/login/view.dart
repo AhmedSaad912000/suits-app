@@ -6,6 +6,7 @@ import 'package:suits/core/design/input_validation.dart';
 import 'package:suits/core/design/my_appbar.dart';
 import 'package:suits/core/design/soical_media_item.dart';
 import 'package:suits/core/logic/helper_methods.dart';
+import 'package:suits/views/auth/sign_up/view.dart';
 import 'package:suits/views/main/home_nav/view.dart';
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -79,12 +80,17 @@ class _LoginViewState extends State<LoginView> {
                         fontFamily: 'Inter'
                       ),),
                       SizedBox(width: 2.w,),
-                      Text('Sign Up',style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                          color:Theme.of(context).primaryColor,
-                          fontFamily: 'Inter'
-                      ),)
+                      GestureDetector(
+                        onTap: (){
+                          navigateTo(SignUpView());
+                        },
+                        child: Text('Sign Up',style: TextStyle(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                            color:Theme.of(context).primaryColor,
+                            fontFamily: 'Inter'
+                        ),),
+                      )
                     ],
                   ),
                 ),

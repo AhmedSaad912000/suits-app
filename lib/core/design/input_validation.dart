@@ -1,7 +1,15 @@
 class InputValidator{
   static String? phone(String?value){
     if(value!.isEmpty){
-      return "يرجي ادخال رقم الجوال ";
+      return "Please Enter Your Phone ";
+    }else{
+      return null;
+    }
+
+  }
+  static String? user(String?value){
+    if(value!.isEmpty){
+      return "Please Enter Your UserName ";
     }else{
       return null;
     }
@@ -9,9 +17,9 @@ class InputValidator{
   }
   static String? password(String?value) {
     if (value!.isEmpty) {
-      return "يرجي ادخال كلمه المرور ";
+      return "Please Enter Your Password ";
     } else if (value.length < 7) {
-      return "لابد من ادخال علي الاقل 7 ارقام ";
+      return "Password Must Be At Least 7 Characters";
     } else {
       return null;
     }

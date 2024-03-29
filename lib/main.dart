@@ -7,6 +7,7 @@ import 'core/logic/helper_methods.dart';
 import 'views/auth/after_on_boarding/view.dart';
 import 'views/auth/login/view.dart';
 import 'views/auth/on_boarding/view.dart';
+import 'views/auth/sign_up/view.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: LoginView(),
+      child: SignUpView(),
 
     );
   }
