@@ -5,7 +5,6 @@ import 'package:suits/core/design/my_appbar.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/components/auth_header.dart';
 import 'package:suits/views/auth/login/view.dart';
-
 import '../../../core/design/app_input.dart';
 
 class NewPasswordView extends StatefulWidget {

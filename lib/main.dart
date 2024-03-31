@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/logic/helper_methods.dart';
 
 import 'views/auth/new_password/view.dart';
+import 'views/main/home_nav/view.dart';
 
 
 void main() async{
@@ -68,6 +69,16 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(32.r),
                 )
               )),
+            appBarTheme: AppBarTheme(
+              titleTextStyle: TextStyle(
+                fontSize: 20.sp,
+                fontWeight: FontWeight.w600,
+                fontFamily: 'Inter',
+                color: Colors.black
+
+              ),
+              centerTitle: false,
+            ),
 
             colorScheme: ColorScheme.fromSeed(seedColor: Color(0xffDD8560),primary:Color(0xffDD8560) ),
         useMaterial3: true,
@@ -75,7 +86,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: NewPasswordView(),
+      child: HomeNavView(),
 
     );
   }
