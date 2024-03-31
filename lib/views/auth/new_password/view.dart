@@ -7,7 +7,6 @@ import 'package:suits/views/auth/components/auth_header.dart';
 import 'package:suits/views/auth/login/view.dart';
 
 import '../../../core/design/app_input.dart';
-import '../../../core/design/input_validation.dart';
 
 class NewPasswordView extends StatefulWidget {
   const NewPasswordView({super.key});
