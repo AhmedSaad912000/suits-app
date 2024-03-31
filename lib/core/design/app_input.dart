@@ -23,6 +23,7 @@ class _AppInputState extends State<AppInput> {
     return  Padding(
       padding:  EdgeInsetsDirectional.only(bottom: widget.bottomSpace.h),
       child: TextFormField(
+
         validator:widget.validator,
         controller:widget.controller,
         obscureText:widget.isPassword && isHide ,

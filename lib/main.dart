@@ -1,11 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:suits/views/auth/confirm_code/view.dart';
 import 'package:suits/views/auth/splash/view.dart';
 
 import 'core/logic/helper_methods.dart';
 import 'views/auth/after_on_boarding/view.dart';
+import 'views/auth/forget_password/view.dart';
 import 'views/auth/login/view.dart';
+import 'views/auth/new_password/view.dart';
 import 'views/auth/on_boarding/view.dart';
 import 'views/auth/sign_up/view.dart';
 
@@ -76,7 +79,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: SignUpView(),
+      child: NewPasswordView(),
 
     );
   }

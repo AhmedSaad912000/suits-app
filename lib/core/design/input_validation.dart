@@ -7,6 +7,14 @@ class InputValidator{
     }
 
   }
+  static String? email(String?value){
+    if(value!.isEmpty){
+      return "Please Enter Your email ";
+    }else{
+      return null;
+    }
+
+  }
   static String? user(String?value){
     if(value!.isEmpty){
       return "Please Enter Your UserName ";

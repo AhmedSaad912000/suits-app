@@ -91,16 +91,13 @@ class _SignUpViewState extends State<SignUpView> {
                 ],
               ),
               SizedBox(height: 32.h,),
-              SizedBox(
-                width: double.infinity,
-                child: AppButton(
-                  onPress: (){
-                    if(formKey.currentState!.validate()){
-                      navigateTo(HomeNavView());
-                    }
-                  },
-                  text: 'Sign UP',
-                ),
+              AppButton(
+                onPress: (){
+                  if(formKey.currentState!.validate()){
+                    navigateTo(HomeNavView());
+                  }
+                },
+                text: 'Sign UP',
               ),
               SizedBox(height: 32.h,),
               Center(
