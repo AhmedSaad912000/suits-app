@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/logic/helper_methods.dart';
 
-import 'views/auth/new_password/view.dart';
 import 'views/main/home_nav/view.dart';
 
 
@@ -70,6 +69,8 @@ class MyApp extends StatelessWidget {
                 )
               )),
             appBarTheme: AppBarTheme(
+              color: Colors.transparent,
+              elevation: 0,
               titleTextStyle: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w600,

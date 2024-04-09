@@ -4,6 +4,7 @@ import 'package:suits/views/main/home_nav/pages/cart/view.dart';
 import 'package:suits/views/main/home_nav/pages/favorite/view.dart';
 import 'package:suits/views/main/home_nav/pages/home/view.dart';
 import 'package:suits/views/main/home_nav/pages/my_account/view.dart';
+
 class HomeNavView extends StatefulWidget {
   const HomeNavView({super.key});
 
@@ -12,21 +13,22 @@ class HomeNavView extends StatefulWidget {
 }
 
 class _HomeNavViewState extends State<HomeNavView> {
-  final list = ['home.svg', 'cart.svg', 'favorits.svg', 'user.svg'];
+  final list = ['home.svg', 'cart.svg', 'favorites.svg', 'user.svg'];
   final List<Widget> pages = [
     HomePage(),
     CartPage(),
     FavoritePage(),
     MyAccountPage()
   ];
-  int currentPage = 0;
+  int currentPage = 2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentPage],
       bottomNavigationBar: BottomNavigationBar(
-         showSelectedLabels: false,
+          selectedItemColor: Theme.of(context).primaryColor,
+          showSelectedLabels: false,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
           currentIndex: currentPage,
@@ -39,9 +41,11 @@ class _HomeNavViewState extends State<HomeNavView> {
             (index) => BottomNavigationBarItem(
                 icon: AppImage(
                   list[index],
-                  color: index == currentPage
-                      ? Theme.of(context).primaryColor
-                      : null,
+                  colorFilter: ColorFilter.mode(
+                      currentPage == index
+                          ? Theme.of(context).primaryColor
+                          : Color(0xff676767),
+                      BlendMode.srcIn),
                 ),
                 label: ''),
           )),
