@@ -20,14 +20,13 @@ class _HomeNavViewState extends State<HomeNavView> {
     FavoritePage(),
     MyAccountPage()
   ];
-  int currentPage = 2;
+  int currentPage = 3;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentPage],
       bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Theme.of(context).primaryColor,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,

@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/logic/helper_methods.dart';
 
 import 'views/main/home_nav/view.dart';
+import 'views/main/product_details/view.dart';
 
 
 void main() async{

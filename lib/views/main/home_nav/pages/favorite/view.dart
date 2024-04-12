@@ -22,7 +22,6 @@ class _FavoritePageState extends State<FavoritePage> {
         children: [
           Categories(),
           Products(),
-
         ],
       ),
     );
