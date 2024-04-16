@@ -2,8 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/logic/helper_methods.dart';
-import 'views/main/checked_out/view.dart';
-import 'views/main/home_nav/view.dart';
+
 import 'views/main/shipping_address/view.dart';
 
 
