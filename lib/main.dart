@@ -1,12 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
 import 'core/logic/helper_methods.dart';
-
+import 'views/main/checked_out/view.dart';
 import 'views/main/home_nav/view.dart';
-import 'views/main/product_details/view.dart';
+import 'views/main/shipping_address/view.dart';
 
 
 void main() async{
@@ -41,6 +39,7 @@ class MyApp extends StatelessWidget {
          debugShowCheckedModeBanner: false,
             title: 'Suits',
             theme: ThemeData(
+              scaffoldBackgroundColor: Color(0xffF4F5F7),
               inputDecorationTheme: InputDecorationTheme(
                 hintStyle: TextStyle(
                     fontSize: 16.sp,
@@ -88,7 +87,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: HomeNavView(),
+      child: ShippingAddressView(),
 
     );
   }

@@ -20,7 +20,7 @@ class _HomeNavViewState extends State<HomeNavView> {
     FavoritePage(),
     MyAccountPage()
   ];
-  int currentPage = 3;
+  int currentPage = 1;
 
   @override
   Widget build(BuildContext context) {

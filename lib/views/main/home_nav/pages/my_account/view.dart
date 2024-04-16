@@ -33,35 +33,48 @@ class _MyAccountPageState extends State<MyAccountPage> {
               height: 40.h,
             ),
             CircleAvatar(
-              radius: 50.r,
-              child: IconButton(
-                onPressed: () async {
-                  showDialog(context: context, builder: (context) => SimpleDialog(
-                    title: Text('Choose Image Source',style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Montserrat',
-                    ),),
-                    children: [
-                      TextButton(onPressed: ()async{
-                        image=await ImagePicker().pickImage(source: ImageSource.gallery);
-                      }, child: Text('Get From Galary')),
-                      TextButton(onPressed: ()async{
-                        image=await ImagePicker().pickImage(source: ImageSource.camera);
-                      }, child: Text('Get From Camera')),
-                    ],
-                  ),);
-                },
-                icon: Icon(
-                  Icons.camera_alt,
-                  color: Colors.white,
+                radius: 50.r,
+                child: IconButton(
+                  onPressed: () async {
+                    await showDialog(
+                      context: context,
+                      builder: (context) => SimpleDialog(
+                        title: Text(
+                          'Choose Image Source',
+                          style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                        children: [
+                          TextButton(
+                              onPressed: () async {
+                                image = await ImagePicker().pickImage(source: ImageSource.gallery);
+                                Navigator.pop(context);
+                              },
+                              child: Text('Get From Galary')),
+                          TextButton(
+                              onPressed: () async {
+                                image = await ImagePicker().pickImage(source: ImageSource.camera);
+                                Navigator.pop(context);
+
+                              },
+                              child: Text('Get From Camera')),
+                        ],
+                      ),
+                    );
+                    setState(() {});
+                  },
+                  icon: Icon(
+                    Icons.camera_alt,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              backgroundImage: image?.path != null
-                  ? NetworkImage(
-                      'https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/379012314_1643341429496071_9172896545057651822_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=h_APRDfNLH4Ab4Jg-a6&_nc_ht=scontent.fcai2-2.fna&oh=00_AfAUVtnoAVtGt5cFHsULQnqD9M12J45J9rJWlq7qTyneSQ&oe=661E899B')
-                  : FileImage(File(image!.path)) as ImageProvider,
-            ),
+                backgroundImage:image?.path==null? NetworkImage(
+                    'https://scontent.fcai2-2.fna.fbcdn.net/v/t39.30808-6/379012314_1643341429496071_9172896545057651822_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=h_APRDfNLH4Ab4Jg-a6&_nc_ht=scontent.fcai2-2.fna&oh=00_AfAUVtnoAVtGt5cFHsULQnqD9M12J45J9rJWlq7qTyneSQ&oe=661E899B')
+                : FileImage(File(image!.path)) as ImageProvider,
+                ),
             SizedBox(
               height: 14.h,
             ),
