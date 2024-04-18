@@ -1,13 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:suits/core/logic/cache_helper.dart';
+import 'package:suits/views/main/add_address/view.dart';
+import 'package:suits/views/main/home_nav/view.dart';
 import 'core/logic/helper_methods.dart';
-
-import 'views/main/shipping_address/view.dart';
-
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   await EasyLocalization.ensureInitialized();
 
   runApp(EasyLocalization(
@@ -19,7 +20,6 @@ void main() async{
   ),
   );
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: ShippingAddressView(),
+      child: HomeNavView(),
 
     );
   }

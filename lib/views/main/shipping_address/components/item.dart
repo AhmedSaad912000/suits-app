@@ -1,7 +1,7 @@
 part of  '../components/../view.dart';
-class Item extends StatelessWidget {
-  final ItemModel model;
-  const Item({super.key, required this.model});
+class _Item extends StatelessWidget {
+  final _ItemModel model;
+  const _Item({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {

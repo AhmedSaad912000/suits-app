@@ -7,6 +7,14 @@ class InputValidator{
     }
 
   }
+  static String? card(String?value){
+    if(value!.isEmpty){
+      return "Please Enter Your Cart ";
+    }else if(value.length < 14){
+      return 'Cart Must Be 14 Characters ';
+    }
+
+  }
   static String? email(String?value){
     if(value!.isEmpty){
       return "Please Enter Your email ";

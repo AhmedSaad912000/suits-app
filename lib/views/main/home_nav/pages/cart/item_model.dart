@@ -1,7 +1,7 @@
 part of 'view.dart';
-class ItemModel{
+class _ItemModel{
   final String image,title,size;
   final double price;
-  ItemModel({required this.image,required this.title,required this.size,required this.price});
+  _ItemModel({required this.image,required this.title,required this.size,required this.price});
 
 }

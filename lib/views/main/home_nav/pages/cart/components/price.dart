@@ -6,10 +6,10 @@ class PriceView extends StatefulWidget {
 }
 
 class _PriceViewState extends State<PriceView> {
-  List<_ItemModel> list=[
-    _ItemModel(title: 'Sub-Total', price: 407.94),
-    _ItemModel(title: 'Delivery Free', price: 25.00),
-    _ItemModel(title: 'Disscount', price: -35.00),
+  List<_ItemPrice> list=[
+    _ItemPrice(title: 'Sub-Total', price: 407.94),
+    _ItemPrice(title: 'Delivery Free', price: 25.00),
+    _ItemPrice(title: 'Disscount', price: -35.00),
 
   ];
   @override
@@ -22,6 +22,7 @@ class _PriceViewState extends State<PriceView> {
         child: Column(
           children: [
             TextFormField(
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 hintText: 'Promo Code',
                 suffixIcon: Padding(
@@ -82,9 +83,9 @@ class _PriceViewState extends State<PriceView> {
     );
   }
 }
-class _ItemModel{
+class _ItemPrice{
   final String title;
   final double price;
-  _ItemModel({required this.title,required this.price});
+  _ItemPrice({required this.title,required this.price});
 
 }

@@ -1,5 +1,4 @@
 part of '../components/../view.dart';
-
 class Products extends StatefulWidget {
   const Products({super.key});
 
@@ -8,50 +7,50 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
-  final List<ItemModel> model = [
-    ItemModel(
+  final List<_ItemModel> model = [
+    _ItemModel(
         image:
             'https://avatars.mds.yandex.net/i?id=67d326e551b37bdfd19151b692fd4fb67df6eece-12373036-images-thumbs&n=13',
         title: 'classic blazar',
         rate: 3.6,
         price: 200,
         isFav: true),
-    ItemModel(
+    _ItemModel(
         image:
             'https://avatars.mds.yandex.net/i?id=d305321145a68f4c756aca7d6511234a-5226897-images-thumbs&n=13',
         title: 'classic shoes',
         rate: 4,
         price: 320,
         isFav: false),
-    ItemModel(
+    _ItemModel(
         image:
             'https://storage.googleapis.com/ownlocal-platform-production/public/images/background_images/1500/469aa93b343676bcfe0b2ea1a208aac0.jpg',
         title: 'pant',
         rate: 5.0,
         price: 340,
         isFav: true),
-    ItemModel(
+    _ItemModel(
         image:
             'https://avatars.mds.yandex.net/i?id=01aca2ac385e7054c5fe6ebc8dd1591e2d309b1d-12471023-images-thumbs&n=13',
         title: 'shirt',
         rate: 6.9,
         price: 500,
         isFav: false),
-    ItemModel(
+    _ItemModel(
         image:
             'https://i.pinimg.com/originals/5f/af/b0/5fafb0058562d4ca940ef5611b2ebdf1.jpg',
         title: ' blazar',
         rate: 2.4,
         price: 210,
         isFav: true),
-    ItemModel(
+    _ItemModel(
         image:
             'https://avatars.mds.yandex.net/i?id=1eb75639e1e5338e579705882488ab1e2a35ed22-12384153-images-thumbs&n=13',
         title: ' shoes',
         rate: 7.9,
         price: 120,
         isFav: false),
-    ItemModel(
+    _ItemModel(
         image:
             'https://www.askandyaboutclothes.com/attachments/6cfc2733-ea17-43fc-b2c2-5b78f3ae5295-jpeg.75181/',
         title: 'classic blazar',
@@ -161,16 +160,4 @@ class _ProductsState extends State<Products> {
   }
 }
 
-class ItemModel {
-  final String image, title;
-  final double rate, price;
-   bool isFav;
 
-  ItemModel({
-    required this.image,
-    required this.title,
-    required this.rate,
-    required this.price,
-    required this.isFav,
-  });
-}

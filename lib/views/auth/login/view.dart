@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:suits/core/design/app_button.dart';
 import 'package:suits/core/design/app_input.dart';
 import 'package:suits/core/design/input_validation.dart';
@@ -8,6 +9,7 @@ import 'package:suits/core/design/soical_media_item.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/sign_up/view.dart';
 import 'package:suits/views/main/home_nav/view.dart';
+import 'package:suits/views/sheets/success.dart';
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -36,7 +38,7 @@ class _LoginViewState extends State<LoginView> {
                 ),),
                 SizedBox(height: 32.h,),
                 AppInput(
-                  validator: InputValidator.phone,
+                 validator: InputValidator.phone,
                   hintText: 'Enter your email',
                   prefixIcon: 'e-mail.png',
                 ),
@@ -62,7 +64,9 @@ class _LoginViewState extends State<LoginView> {
                   child: AppButton(
                     onPress: (){
                       if(formKey.currentState!.validate()){
-                        navigateTo(HomeNavView());
+                        showDialog(context: context, builder: (context) =>SuccessSheet(title: 'Yeay! Welcome Back', subtitle: 'Once again you login successfully\ninto medidoc app', textButton: 'Go to home')
+                        );
+                       // navigateTo(HomeNavView());
                       }
                     },
                     text: 'Login',

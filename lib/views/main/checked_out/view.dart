@@ -16,37 +16,37 @@ class CheckOutView extends StatefulWidget {
 }
 
 class _CheckOutViewState extends State<CheckOutView> {
-  List<ItemModel> list = [
-    ItemModel(
+  List<_ItemModel> list = [
+    _ItemModel(
         image:
             'https://webpulse.imgsmail.ru/imgpreview?mb=webpulse&key=pulse_cabinet-image-e7384d69-9e19-4e0e-8083-40439763af91',
         title: 'Classic Blazar',
         size: 'X',
         price: 90),
-    ItemModel(
+    _ItemModel(
         image:
             'https://2.bp.blogspot.com/-3_8oGxu0p_k/V0hLa7LUZFI/AAAAAAAAA0U/cqi_eJCjU3oFlTLMbYatxq-K3El-5UF2ACLcB/s1600/How-and-Why-to-Wear-Colorful-Pants.jpg',
         title: 'Pant',
         size: 'XL',
         price: 120),
-    ItemModel(
+    _ItemModel(
         image: 'https://mysticalpeace.com/userfiles/149/6707_2.webp',
         title: 'Shoes',
         size: 'XX',
         price: 300),
-    ItemModel(
+    _ItemModel(
         image:
             'https://cdn.21buttons.com/posts/1080x1109/5449561f1b1c4125871f86983be98df1_1080x1109.jpg',
         title: 'Classic Blazar',
         size: '3X',
         price: 320),
-    ItemModel(
+    _ItemModel(
         image:
             'https://cdn.21buttons.com/posts/1080x1109/5449561f1b1c4125871f86983be98df1_1080x1109.jpg',
         title: 'Classic Blazar',
         size: '3X',
         price: 320),
-    ItemModel(
+    _ItemModel(
         image:
             'https://www.pippa.ie/wp-content/uploads/2019/01/dfbe7a056e2882d27c67843cfbcac91e.jpg',
         title: 'Classic Blazar',
@@ -126,7 +126,7 @@ class _CheckOutViewState extends State<CheckOutView> {
             ),
             Expanded(
               child: ListView.separated(
-                  itemBuilder: (context, index) => Item(model: list[index]),
+                  itemBuilder: (context, index) => _Item(model: list[index]),
                   separatorBuilder: (context, index) => SizedBox(
                         height: 16.h,
                       ),

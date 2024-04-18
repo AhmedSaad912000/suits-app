@@ -5,6 +5,7 @@ import 'package:suits/core/design/my_appbar.dart';
 import '../../../../../core/design/app_image.dart';
 part 'components/categories.dart';
 part 'components/products.dart';
+part 'item_model.dart';
 class FavoritePage extends StatefulWidget {
   const FavoritePage({super.key});
 

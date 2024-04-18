@@ -17,15 +17,15 @@ class ShippingAddressView extends StatefulWidget {
 }
 
 class _ShippingAddressViewState extends State<ShippingAddressView> {
-  List<ItemModel> list = [
-    ItemModel(title1: 'Home', title2: 'Dakahlia, Mansoura, \nAl-Sabahi Street'),
-    ItemModel(
+  List<_ItemModel> list = [
+    _ItemModel(title1: 'Home', title2: 'Dakahlia, Mansoura, \nAl-Sabahi Street'),
+    _ItemModel(
         title1: 'Office',
         title2: ' Mansoura, Al-Gamaa District,\nAl-Sabahi Street'),
-    ItemModel(
+    _ItemModel(
         title1: 'Parent’s House',
         title2: 'Dakahlia, Mansoura, Al-Gamaa District,'),
-    ItemModel(title1: 'Frind’s House', title2: 'Dakahlia, Mansoura, '),
+    _ItemModel(title1: 'Frind’s House', title2: 'Dakahlia, Mansoura, '),
   ];
 
   @override
@@ -42,7 +42,7 @@ class _ShippingAddressViewState extends State<ShippingAddressView> {
               SizedBox(
                 height: 450.h,
                 child: ListView.builder(
-                                itemBuilder: (context, index) => Item(
+                                itemBuilder: (context, index) => _Item(
                 model: list[index],
                                 ),
                                 itemCount: list.length,

@@ -17,6 +17,8 @@ dependencies:
   flutter_slidable: ^3.1.0
   dotted_line: ^3.2.2
   dotted_border: ^2.1.0
+  lottie: ^3.1.0
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +45,7 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/svg/
+    - assets/lottie/
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

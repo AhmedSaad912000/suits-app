@@ -1,13 +1,13 @@
 part of '../components/../view.dart';
-class Item extends StatefulWidget {
-  final ItemModel model;
+class _Item extends StatefulWidget {
+  final _ItemModel model;
   final int index;
   final void Function(BuildContext)? onPress;
-  const Item({super.key, required this.model, this.onPress, required this.index});
+  const _Item({super.key, required this.model, this.onPress, required this.index});
   @override
-  State<Item> createState() => _ItemState();
+  State<_Item> createState() => _ItemState();
 }
-class _ItemState extends State<Item> {
+class _ItemState extends State<_Item> {
   int counter = 1;
   @override
   Widget build(BuildContext context) {

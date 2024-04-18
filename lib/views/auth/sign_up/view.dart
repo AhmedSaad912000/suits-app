@@ -5,7 +5,7 @@ import 'package:suits/core/design/app_input.dart';
 import 'package:suits/core/design/my_appbar.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/login/view.dart';
-import 'package:suits/views/main/home_nav/view.dart';
+import 'package:suits/views/sheets/success.dart';
 import '../../../core/design/input_validation.dart';
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -23,7 +23,7 @@ class _SignUpViewState extends State<SignUpView> {
       appBar: MyAppBar(text: 'Sign Up'),
       body: Form(
         key: formKey,
-        child: Padding(
+        child: SingleChildScrollView(
           padding:  EdgeInsetsDirectional.symmetric(horizontal: 17.w),
           child: Column(
             children: [
@@ -42,7 +42,6 @@ class _SignUpViewState extends State<SignUpView> {
                 hintText: 'Enter your password',
                 prefixIcon: 'password.png',
                 isPassword: true,
-                bottomSpace: 0,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +50,6 @@ class _SignUpViewState extends State<SignUpView> {
                     scale: 1.25.r,
                     child: Checkbox(
                      visualDensity: VisualDensity.compact,
-                      fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
                       side: BorderSide(
                         color: Color(0xffD9D9D9),
                       ),
@@ -94,7 +92,7 @@ class _SignUpViewState extends State<SignUpView> {
               AppButton(
                 onPress: (){
                   if(formKey.currentState!.validate()){
-                    navigateTo(HomeNavView());
+                    showDialog(context: context, builder: (context) => SuccessSheet(title: 'Success', subtitle: 'Your account has been successfully registered', textButton: 'Login'),);
                   }
                 },
                 text: 'Sign UP',
