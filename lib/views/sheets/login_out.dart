@@ -5,7 +5,9 @@ import '../../core/logic/helper_methods.dart';
 import '../auth/login/view.dart';
 
 class LoginOutSheet extends StatelessWidget {
-  const LoginOutSheet({super.key});
+  final void Function()? onPress;
+  const LoginOutSheet({super.key, this.onPress});
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +52,7 @@ class LoginOutSheet extends StatelessWidget {
               width: 29.w,
             ),
             FilledButton(
-              onPressed: () {
-                navigateTo(LoginView());
-              },
+              onPressed: onPress,
               child: Text('Yes, Logout'),
               style:FilledButton.styleFrom(
                   fixedSize: Size.fromHeight( 15.h)

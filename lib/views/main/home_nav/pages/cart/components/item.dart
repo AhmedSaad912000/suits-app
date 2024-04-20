@@ -2,8 +2,9 @@ part of '../components/../view.dart';
 class _Item extends StatefulWidget {
   final _ItemModel model;
   final int index;
+
   final void Function(BuildContext)? onPress;
-  const _Item({super.key, required this.model, this.onPress, required this.index});
+  const _Item({required this.model, required this.index, this.onPress,});
   @override
   State<_Item> createState() => _ItemState();
 }

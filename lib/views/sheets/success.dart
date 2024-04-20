@@ -8,7 +8,8 @@ import '../main/home_nav/view.dart';
 
 class SuccessSheet extends StatelessWidget {
   final String title,subtitle,textButton;
-  const SuccessSheet({super.key, required this.title, required this.subtitle, required this.textButton});
+  final void Function()? onPress;
+  const SuccessSheet({super.key, required this.title, required this.subtitle, required this.textButton, this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +34,7 @@ class SuccessSheet extends StatelessWidget {
         SizedBox(height: 16.h,),
         AppButton(
           text: textButton,
-          onPress: (){
-            navigateTo(HomeNavView());
-          },
+          onPress: onPress,
         )
 
 

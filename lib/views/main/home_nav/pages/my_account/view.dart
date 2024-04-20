@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:suits/core/design/app_image.dart';
 import 'package:suits/core/design/my_appbar.dart';
+import 'package:suits/core/logic/cache_helper.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/login/view.dart';
 
@@ -105,7 +106,11 @@ class _MyAccountPageState extends State<MyAccountPage> {
               onTap: () {
                 showDialog(
                     context: context,
-                    builder: (context) => LoginOutSheet()
+                    builder: (context) => LoginOutSheet(
+                        onPress: ()async {
+                         await CacheHelper.clear();
+                      navigateTo(LoginView(),withHistory: false);
+                    },)
                 );
               },
             ),

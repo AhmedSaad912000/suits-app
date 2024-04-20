@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/design/app_image.dart';
 import 'package:suits/core/design/my_appbar.dart';
+import 'package:suits/core/logic/helper_methods.dart';
+import 'package:suits/views/main/home_nav/pages/cart/view.dart';
 
 part 'components/product_description.dart';
 
@@ -83,7 +85,9 @@ class ProductDetailsView extends StatelessWidget {
                         backgroundColor: Theme.of(context).primaryColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadiusDirectional.circular(10.r))),
-                    onPressed: () {},
+                    onPressed: () {
+                      navigateTo(CartPage());
+                    },
                     child: Text('Add To Cart',style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,

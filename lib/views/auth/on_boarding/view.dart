@@ -127,7 +127,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 currentIndex++;
                 setState(() {});
               }else{
-                navigateTo(AfterOnBoardingView());
+                navigateTo(AfterOnBoardingView(),withHistory: false);
               }
             },
             child: CircleAvatar(

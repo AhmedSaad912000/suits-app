@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/cache_helper.dart';
-import 'package:suits/views/main/add_address/view.dart';
+import 'package:suits/views/auth/splash/view.dart';
 import 'package:suits/views/main/home_nav/view.dart';
 import 'core/logic/helper_methods.dart';
 
@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
          home: child,
        );
       },
-      child: HomeNavView(),
+      child: SplashView(),
 
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/design/app_image.dart';
+import 'package:suits/core/logic/helper_methods.dart';
+import 'package:suits/views/main/product_details/view.dart';
 part 'components/categories.dart';
 part 'components/new_collection.dart';
 part 'components/flash_sale.dart';
