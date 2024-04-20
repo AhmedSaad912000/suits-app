@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/logic/helper_methods.dart';
-import '../auth/login/view.dart';
 
 class LoginOutSheet extends StatelessWidget {
   final void Function()? onPress;

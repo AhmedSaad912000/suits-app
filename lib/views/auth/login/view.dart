@@ -50,7 +50,7 @@ class _LoginViewState extends State<LoginView> {
                   height: 32.h,
                 ),
                 AppInput(
-                  validator: InputValidator.phone,
+                  validator: InputValidator.email,
                   hintText: 'Enter your email',
                   prefixIcon: 'e-mail.png',
                 ),

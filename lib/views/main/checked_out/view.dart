@@ -4,7 +4,6 @@ import 'package:suits/core/design/app_image.dart';
 import 'package:suits/core/design/bottom_button.dart';
 import 'package:suits/core/design/my_appbar.dart';
 import 'package:suits/core/logic/helper_methods.dart';
-import 'package:suits/views/main/payment/view.dart';
 import 'package:suits/views/my_account/payment_method/view.dart';
 
 part 'item_model.dart';

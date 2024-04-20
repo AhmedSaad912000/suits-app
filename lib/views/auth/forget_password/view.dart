@@ -67,11 +67,12 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                 ),
                 SizedBox(height: 32.h,),
                 Expanded(
+                  flex: 4,
                   child: TabBarView(children: [
                     AppInput(
                       validator: InputValidator.email,
                       prefixIcon: 'email_reset.png',
-                      hintText: 'Enter ypur e-mail',
+                      hintText: 'Enter your e-mail',
 
                     ),
                     AppInput(

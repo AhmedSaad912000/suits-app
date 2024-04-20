@@ -29,7 +29,8 @@ class _SplashViewState extends State<SplashView> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
-        child: FadeIn(
+        child: FadeOut(
+          duration: Duration(seconds: 5),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

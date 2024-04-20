@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../core/design/app_button.dart';
-import '../../core/logic/helper_methods.dart';
-import '../main/home_nav/view.dart';
+
 
 class SuccessSheet extends StatelessWidget {
   final String title,subtitle,textButton;

@@ -11,7 +11,10 @@ class SocialMediaItem extends StatelessWidget {
     return Padding(
       padding:  EdgeInsetsDirectional.only(bottom: 16.h),
       child: Ink(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(32.h),
+        ),
         child: ListTile(
           shape: OutlineInputBorder(
               borderRadius: BorderRadius.circular(32.h),
