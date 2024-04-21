@@ -7,7 +7,6 @@ import 'package:suits/core/design/my_appbar.dart';
 import 'package:suits/core/logic/helper_methods.dart';
 import 'package:suits/views/auth/components/auth_header.dart';
 import 'package:suits/views/auth/confirm_code/view.dart';
-
 class ForgetPasswordView extends StatefulWidget {
   const ForgetPasswordView({super.key});
 
@@ -76,9 +75,10 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
 
                     ),
                     AppInput(
+                      keyboardType: TextInputType.number,
                       validator: InputValidator.phone,
                       prefixIcon: 'phone_reset.png',
-                      hintText: 'Enter ypur phone',
+                      hintText: 'Enter your phone',
 
                     ),
                   ]),
