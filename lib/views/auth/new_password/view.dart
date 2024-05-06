@@ -16,7 +16,7 @@ class NewPasswordView extends StatefulWidget {
 class _NewPasswordViewState extends State<NewPasswordView> {
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
-  final formKey=GlobalKey<FormState>();
+    final formKey=GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {

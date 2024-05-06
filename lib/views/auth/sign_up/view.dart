@@ -16,7 +16,6 @@ class SignUpView extends StatefulWidget {
   @override
   State<SignUpView> createState() => _SignUpViewState();
 }
-
 class _SignUpViewState extends State<SignUpView> {
   final formKey = GlobalKey<FormState>();
   bool isSelected = false;

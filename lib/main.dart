@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suits/core/logic/cache_helper.dart';
 import 'package:suits/views/auth/splash/view.dart';
 import 'core/logic/helper_methods.dart';
-import 'views/auth/forget_password/view.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
